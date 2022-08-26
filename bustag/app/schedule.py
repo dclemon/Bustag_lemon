@@ -12,7 +12,7 @@ scheduler = None
 loop = None
 
 
-def download(loop, no_parse_links=False, urls=None):
+def download(loop, no_parse_links=False, urls=None, p=None):
     """
     下载更新数据
 
@@ -30,14 +30,15 @@ def download(loop, no_parse_links=False, urls=None):
         count = len(urls)
     extra_options = APP_CONFIG.get('options', {})
     options = {'no_parse_links': no_parse_links,
-               'roots': urls, 'count': count}
+               'roots': urls, 'count': count, 'proxy':p}
     extra_options.update(options)
-
+    print('开始推荐')
     aspider.download(loop, extra_options)
     try:
         import bustag.model.classifier as clf
 
         clf.recommend()
+        print('recommand执行完毕')
     except FileNotFoundError:
         print('还没有训练好的模型, 无法推荐')
 
@@ -52,9 +53,12 @@ def start_scheduler():
     int_trigger = IntervalTrigger(seconds=interval)
     date_trigger = DateTrigger(run_date=t1)
     urls = (APP_CONFIG['download.root_path'],)
+    print(urls)
+    proxy = APP_CONFIG['download.proxy']
+    print(proxy)
     # add for down at server start
-    scheduler.add_job(download, trigger=date_trigger, args=(loop, False, urls))
-    scheduler.add_job(download, trigger=int_trigger, args=(loop, False, urls))
+    scheduler.add_job(download, trigger=date_trigger, args=(loop, False, urls, proxy))
+    scheduler.add_job(download, trigger=int_trigger, args=(loop, False, urls, proxy))
     scheduler.start()
     asyncio.set_event_loop(loop)
     loop.run_forever()
