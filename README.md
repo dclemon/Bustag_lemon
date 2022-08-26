@@ -2,10 +2,15 @@
 gxtrobot的bustag修复版，修复了图片不显示的问题，增加了代理功能
 
 使用方法（群晖）
+
 1.新建一个容器，推荐使用https://registry.hub.docker.com/r/aiastia/bustag/
+
 2.把项目上传到群晖
+
 3.把项目目录内的bustag文件夹映射为/app/src/bustag
+
 4.把项目目录内的data文件夹映射为/app/data
+
 5.config.ini内填写你的本地代理（不支持socks5，必须转为http代理才可使用）
 
 映射参数：
