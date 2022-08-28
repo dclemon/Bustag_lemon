@@ -11,15 +11,18 @@ Bustag 是一个基于我开发的 python 异步爬虫框架开发aspider的自�
 
 2.把项目上传到群晖
 
-3.把项目目录内的bustag文件夹映射为/app/src/bustag
-
-4.把项目目录内的data文件夹映射为/app/data
+3.把项目的根目录文件夹映射为/app
 
 5.config.ini内填写你的本地代理（不支持socks5，必须转为http代理才可使用）
 
-映射参数：
-![I(8UBAA{$KZMHGKM%9) Q7R](https://user-images.githubusercontent.com/63597032/186806313-183e7b9c-3d6d-472c-9af2-e9b3de94005c.png)
+6.去微软小冰申请一个自己的AI评分接口，例如:https://ux.xiaoice.com/PersonalizedBeauty?aiid=bpb3c9d08397070e59b88c82380e58286a&mode=share&share=1
+在config的personal_aiid内填上链接里的aiid,即为bpb3c9d08397070e59b88c82380e58286a
+
+
 
 效果截图：
-
+添加代理
 ![MR`A(2410KVDVTV23GD(EY0](https://user-images.githubusercontent.com/63597032/186806355-ff3bb774-3fd3-4266-b1bd-38e156ebd63c.png)
+AI打分
+
+![W4WN 0IZLGAI6EQY@ Z9`67](https://user-images.githubusercontent.com/63597032/187053081-13578adc-0b9e-44e4-be7c-1cabde551698.png)
