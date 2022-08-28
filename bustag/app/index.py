@@ -115,10 +115,12 @@ def autotag():
         face_score = core.get_score("222.png", personal_url)
         if face_score >= 9:
             core.like(a.fanhao)
-            print ('番号' + a.fanhao + "标记为喜欢")
+            print('番号' + a.fanhao + "标记为喜欢")
+        elif face_score == 0:
+            print('未识别出人脸，暂不处理')
         else:
             core.dislike(a.fanhao)
-            print ('番号' + a.fanhao + "标记为不喜欢")
+            print('番号' + a.fanhao + "标记为不喜欢")
 
 
 
