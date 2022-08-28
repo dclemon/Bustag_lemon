@@ -21,8 +21,10 @@ Bustag 是一个基于我开发的 python 异步爬虫框架开发aspider的自�
 
 
 效果截图：
+
 添加代理
 ![MR`A(2410KVDVTV23GD(EY0](https://user-images.githubusercontent.com/63597032/186806355-ff3bb774-3fd3-4266-b1bd-38e156ebd63c.png)
+
 AI打分
 
 ![W4WN 0IZLGAI6EQY@ Z9`67](https://user-images.githubusercontent.com/63597032/187053081-13578adc-0b9e-44e4-be7c-1cabde551698.png)
