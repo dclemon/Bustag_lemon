@@ -61,7 +61,12 @@ def start_scheduler():
     scheduler.add_job(download, trigger=int_trigger, args=(loop, False, urls, proxy))
     scheduler.start()
     asyncio.set_event_loop(loop)
-    loop.run_forever()
+    try:
+        loop.run_forever()
+    finally:
+        # 不管是什么异常，最终都要close掉loop循环
+        loop.close()
+
 
 
 def add_download_job(urls):
