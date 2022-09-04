@@ -18,7 +18,10 @@ Bustag 是一个基于我开发的 python 异步爬虫框架开发aspider的自�
 6.去微软小冰申请一个自己的AI评分接口，例如:https://ux.xiaoice.com/PersonalizedBeauty?aiid=bpb3c9d08397070e59b88c82380e58286a&mode=share&share=1
 在config的personal_aiid内填上链接里的aiid,即为bpb3c9d08397070e59b88c82380e58286a
 
-目前点击打分一次只会处理10条数据
+目前点击打分一次只会处理10条数据,可以通过圈X或者python设定定时post任务
+
+目前的BUG：貌似打包的镜像有问题，容器启动后爬取过程中容易卡死导致爬不到数据，首页不给推荐。由于我不太熟悉dockerfile，目前还没有解决。可以安装https://registry.hub.docker.com/r/aiastia/bustag/
+这个镜像，映射好需要的路径，启动后进入docker,pip install需要的包完善环境后即可正常爬取。
 
 
 
