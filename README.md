@@ -7,7 +7,7 @@ Bustag 是一个基于我开发的 python 异步爬虫框架开发aspider的自�
 
 使用方法（群晖）
 
-1.新建一个容器，https://registry.hub.docker.com/r/dclemon/bustag,注意下载tag为0.0.4的版本
+1.新建一个容器，https://registry.hub.docker.com/r/aiastia/bustag/
 
 2.把项目上传到群晖
 
